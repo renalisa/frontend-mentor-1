@@ -6,59 +6,57 @@ video {
   height: auto;
 }
 /* GENERAL Styles*/
+body {
+  font-family: "Lexend Deca", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0 1rem;
+}
 
 article.card {
+  max-width: 60rem;
   text-align: left;
   display: flex;
-  margin-right: 2rem;
-  margin-left: 2rem;
-  margin-top: 3rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+
 }
-article.card p,
-h1,
-img,
-button {
-  margin-left: 3rem;
-  margin-right: 3rem;
-  font-family: "lexend_deca";
+
 }
 article.card img {
   align: center;
-  margin-top: 1rem;
+
 }
 article.card h1 {
   font-weight: 700;
-  font-size: 2rem;
-  font-family: sans-serif;
+  font-size: 1.5rem;
   letter-spacing: -0.1rem;
 }
-article.card button {
+article.card a {
   border-radius: 1.5rem;
   background-color: white;
-  margin-bottom: 2rem;
-  max-width: 6rem;
+  /* margin-bottom: 2rem; */
+  /* max-width: 6rem; */
   border: none;
   padding: 0.5rem;
+  max-width: 75%;
+  text-align: center;
+  margin-top: auto;
 }
 
 article.card section {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding: 2rem;
 }
 
 /* Mobile Only */
 @media (max-width: 40em) {
   article.card {
     flex-direction: column;
-  }
-  article.card section.sedans {
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-  }
-  article.card section.luxury {
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
   }
 }
 
@@ -68,24 +66,14 @@ article.card section {
     flex-direction: row;
   }
 
-  article.card section.sedans {
-    border-top-left-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
-  }
-  article.card section.luxury {
-    border-top-right-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
-  }
-  article.card button {
-    margin-top: 2rem;
-  }
+  
 }
 
 /* Sedans */
 article.card section.sedans h1 {
   color: white;
 }
-article.card section.sedans button {
+article.card section.sedans a {
   color: hsl(31, 77%, 52%);
 }
 article.card section.sedans {
@@ -102,7 +90,7 @@ article.card section.suvs {
   background-color: hsl(184, 100%, 22%);
   color: white;
 }
-article.card section.suvs button {
+article.card section.suvs a {
   color: hsl(184, 100%, 22%);
 }
 
@@ -116,6 +104,6 @@ article.card section.luxury {
   background-color: hsl(179, 100%, 13%);
   color: white;
 }
-article.card section.luxury button {
+article.card section.luxury a {
   color: hsl(179, 100%, 13%);
 }
